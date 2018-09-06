@@ -1,0 +1,4 @@
+para ser utilizado se nesecita configurar raspberry, en la app se cambia la misma ip que tenga la raspberry y listo, en la raspberry se instala 
+vlc y se crea un archivo sh dentro de ese archivo se coloca esto raspivid -o - -t 99999 -w 640 -h 360 -fps 25|cvlc stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}' :demux=h264
+se guarda y despues se abre ./stream.sh 
+despues de abierto ahi si se prueba con la app debe verificar si funciona la camara y si esta grabando en la pantalla de raspberry 
